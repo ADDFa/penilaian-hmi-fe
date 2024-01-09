@@ -1,9 +1,14 @@
 import { Outlet } from "react-router-dom"
+import Navbar from "./Components/Navbar"
 
 const Admin = () => {
     return (
         <>
-            <Outlet />
+            <Navbar />
+
+            <div className="container">
+                <Outlet />
+            </div>
         </>
     )
 }
