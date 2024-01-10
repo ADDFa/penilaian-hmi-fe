@@ -11,4 +11,8 @@ namespace UserTraining {
             React.SetStateAction<UserTrainingT | undefined>
         >
     }
+
+    interface UsersScoreI {
+        users: Record<string, any>[]
+    }
 }

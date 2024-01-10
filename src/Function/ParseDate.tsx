@@ -23,5 +23,5 @@ export const ParseDate = (dateStr?: any) => {
     const M = months[date.getMonth()]
     const d = addZero(date.getDate())
 
-    return `${Y} ${M} ${d}`
+    return `${d} ${M} ${Y}`
 }

@@ -39,13 +39,20 @@ const Training = () => {
                                     </div>
                                 </div>
 
-                                <div className="d-flex justify-content-end gap-1 mt-4">
+                                <div className="d-flex justify-content-end align-items-center gap-1 mt-4">
                                     <Link
                                         to={`/admin/user-training/${id}`}
                                         className="btn btn-info"
                                         title="Daftar Peserta Pelatihan"
                                     >
-                                        <i className="bi bi-person-lines-fill fs-5"></i>
+                                        <i className="bi bi-person-lines-fill"></i>
+                                    </Link>
+
+                                    <Link
+                                        to={`/admin/training/${id}/user`}
+                                        className="btn btn-success"
+                                    >
+                                        <i className="bi bi-pen"></i>
                                     </Link>
 
                                     <DeleteTraining
