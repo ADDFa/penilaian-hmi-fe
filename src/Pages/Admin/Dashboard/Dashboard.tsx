@@ -10,8 +10,8 @@ const Dashboard = () => {
                             <div className="col-1">
                                 <i className="bi bi-people fs-3"></i>
                             </div>
-                            <div className="col">
-                                <h5 className="m-0">Pengguna</h5>
+                            <div className="col-11">
+                                <h5 className="mb-0 ms-2">Pengguna</h5>
                             </div>
                         </div>
 
@@ -34,8 +34,8 @@ const Dashboard = () => {
                             <div className="col-1">
                                 <i className="bi bi-file-earmark-ruled fs-3"></i>
                             </div>
-                            <div className="col">
-                                <h5 className="m-0">Pelatihan</h5>
+                            <div className="col-11">
+                                <h5 className="mb-0 ms-2">Pelatihan</h5>
                             </div>
                         </div>
 

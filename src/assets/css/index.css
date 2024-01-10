@@ -5,3 +5,26 @@
 .show-password-icon {
     right: .7rem;
 }
+
+.print-d-flex {
+    display: none;
+}
+
+@media print {
+    .container {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    nav {
+        display: none !important;
+    }
+
+    .print-d-none {
+        display: none !important;
+    }
+
+    .print-d-flex {
+        display: flex;
+    }
+}

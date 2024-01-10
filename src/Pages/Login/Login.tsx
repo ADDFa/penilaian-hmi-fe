@@ -14,9 +14,11 @@ const Login = () => {
 
         const req = new Api("token", { body: e.currentTarget })
         const res = await req.result()
-        if (res) Auth.auth = res
-
         setLoading(false)
+
+        if (!res) return
+
+        Auth.auth = res
         navigate("/admin/dashboard")
     }
 

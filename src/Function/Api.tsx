@@ -55,6 +55,10 @@ class Api {
         return Auth.token as string
     }
 
+    set setUri(uri: string) {
+        this.uri = uri
+    }
+
     async result(): Promise<any> {
         const token = await this.getToken()
         const init: RequestInit = {

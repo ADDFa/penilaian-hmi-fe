@@ -43,16 +43,16 @@ const Training = () => {
                                     <Link
                                         to={`/admin/user-training/${id}`}
                                         className="btn btn-info"
-                                        title="Daftar Peserta Pelatihan"
+                                        title="Daftar Nilai Peserta Pelatihan"
                                     >
                                         <i className="bi bi-person-lines-fill"></i>
                                     </Link>
 
                                     <Link
-                                        to={`/admin/training/${id}/user`}
-                                        className="btn btn-success"
+                                        to={`/admin/user-training/${id}/report`}
+                                        className="btn btn-warning"
                                     >
-                                        <i className="bi bi-pen"></i>
+                                        <i className="bi bi-clipboard-data-fill"></i>
                                     </Link>
 
                                     <DeleteTraining
