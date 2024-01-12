@@ -17,7 +17,11 @@ const DeleteUser = ({ id, users, setUsers }: User.DeleteUserI) => {
     }
 
     return (
-        <button className="btn btn-danger ms-1" onClick={handleClick}>
+        <button
+            className="btn btn-danger ms-1"
+            onClick={handleClick}
+            title="Hapus Data Pengguna"
+        >
             <i className="bi bi-trash"></i>
         </button>
     )

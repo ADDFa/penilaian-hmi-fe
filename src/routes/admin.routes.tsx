@@ -8,6 +8,8 @@ import EditUser from "../Pages/Admin/User/EditUser"
 import UserTraining from "../Pages/Admin/UserTraining/UserTraining"
 import AddUserTraining from "../Pages/Admin/UserTraining/AddUserTraining"
 import Report from "../Pages/Admin/UserTraining/Report"
+import UserScore from "../Pages/Admin/UserTraining/UserScore"
+import EditUserScore from "../Pages/Admin/UserTraining/Components/EditUserScore"
 
 const adminRoutes: RouteObject[] = [
     {
@@ -45,6 +47,14 @@ const adminRoutes: RouteObject[] = [
     {
         path: "user-training/:training_id/report",
         element: <Report />
+    },
+    {
+        path: "user-training/:training_id/score",
+        element: <UserScore />
+    },
+    {
+        path: "score/:score_id",
+        element: <EditUserScore />
     }
 ]
 

@@ -34,19 +34,19 @@ const Report = () => {
         })
     }, [])
 
-    const getTotal = (userId: string | number) => {
+    const getUser = (userId: string | number) => {
         if (users.length < 1) return
 
         const user = users.find((userScore) => userScore.id == userId)
-        return user?.total
+        return user
     }
 
     const handleClick: MouseEventHandler<HTMLUListElement> = (e) => {
-        const { id } = e.currentTarget.dataset
+        const { id, score_id } = e.currentTarget.dataset
         if (e.target instanceof HTMLAnchorElement) {
             const status = e.target.textContent
             const req = new Api("report", {
-                body: { _method: "PUT", user_id: id, status }
+                body: { _method: "PUT", user_id: id, status, score_id }
             })
             req.result().then((res) => {
                 if (!res) return
@@ -118,10 +118,10 @@ const Report = () => {
                         <tr key={i}>
                             <th scope="row">{++i}</th>
                             <td>{nama}</td>
-                            <td>{getTotal(id)}</td>
+                            <td>{getUser(id)?.total}</td>
                             <td className="row row-cols-2 m-0">
                                 <div className="col-9">
-                                    <span>{report?.status}</span>
+                                    <span>{report?.status || "-"}</span>
                                 </div>
                                 <div className="col-3">
                                     <div className="dropdown">
@@ -137,6 +137,7 @@ const Report = () => {
                                             className="dropdown-menu"
                                             onClick={handleClick}
                                             data-id={id}
+                                            data-score_id={getUser(id)?.scoreId}
                                         >
                                             <li>
                                                 <Link

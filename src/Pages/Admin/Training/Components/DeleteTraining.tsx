@@ -25,7 +25,11 @@ const DeleteTraining: FC<Training.DeleteTrainingI> = ({
     }
 
     return (
-        <button className="btn btn-danger" onClick={handleClick}>
+        <button
+            className="btn btn-danger"
+            onClick={handleClick}
+            title="Hapus Pelatihan"
+        >
             <i className="bi bi-trash"></i>
         </button>
     )

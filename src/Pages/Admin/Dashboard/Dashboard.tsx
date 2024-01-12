@@ -16,12 +16,17 @@ const Dashboard = () => {
                         </div>
 
                         <div className="d-flex justify-content-end gap-1 mt-4">
-                            <Link to="/admin/user" className="btn btn-primary">
+                            <Link
+                                to="/admin/user"
+                                className="btn btn-primary"
+                                title="Data Pengguna"
+                            >
                                 <i className="bi bi-people fs-5"></i>
                             </Link>
                             <Link
                                 to="/admin/user/add"
                                 className="btn btn-success"
+                                title="Tambah Pengguna"
                             >
                                 <i className="bi bi-person-add fs-5"></i>
                             </Link>
@@ -43,12 +48,14 @@ const Dashboard = () => {
                             <Link
                                 to="/admin/training"
                                 className="btn btn-primary"
+                                title="Data Pelatihan"
                             >
                                 <i className="bi bi-file-earmark-ruled fs-5"></i>
                             </Link>
                             <Link
                                 to="/admin/training/add"
                                 className="btn btn-success"
+                                title="Tambah Pelatihan"
                             >
                                 <i className="bi bi-file-plus fs-5"></i>
                             </Link>

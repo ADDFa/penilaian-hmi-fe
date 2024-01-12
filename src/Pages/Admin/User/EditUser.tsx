@@ -27,7 +27,7 @@ const EditUser = () => {
         req.result().then((res) => {
             setLoading(false)
             if (!res) return
-            navigate(-1)
+            navigate("/admin/user")
         })
     }
 

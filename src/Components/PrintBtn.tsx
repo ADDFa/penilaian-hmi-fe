@@ -1,4 +1,4 @@
-import { MouseEventHandler } from "react"
+import { MouseEventHandler, memo } from "react"
 
 const PrintBtn = () => {
     const handleClick: MouseEventHandler<HTMLButtonElement> = () => {
@@ -10,10 +10,11 @@ const PrintBtn = () => {
             className="btn btn-primary print-d-none"
             type="button"
             onClick={handleClick}
+            title="Cetak Halaman"
         >
             <i className="bi bi-printer"></i>
         </button>
     )
 }
 
-export default PrintBtn
+export default memo(PrintBtn)

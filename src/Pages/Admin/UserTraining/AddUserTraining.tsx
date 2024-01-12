@@ -29,10 +29,9 @@ const AddUserTraining = () => {
         req.result().then((res) => {
             setLoading(false)
             if (!res) return
-            console.log(res)
         })
 
-        navigate(`/admin/user-training/${training_id}`)
+        navigate(-1)
     }
 
     const handleChange: ReactEventHandler<HTMLInputElement> = (e) => {

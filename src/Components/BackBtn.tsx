@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, FC, MouseEventHandler } from "react"
+import { ButtonHTMLAttributes, FC, MouseEventHandler, memo } from "react"
 import { useNavigate } from "react-router-dom"
 
 const BackBtn: FC<ButtonHTMLAttributes<HTMLButtonElement>> = (props) => {
@@ -13,10 +13,11 @@ const BackBtn: FC<ButtonHTMLAttributes<HTMLButtonElement>> = (props) => {
             className="btn btn-warning"
             {...props}
             onClick={handleClick}
+            title="Kembali"
         >
             <i className="bi bi-arrow-left-circle"></i>
         </button>
     )
 }
 
-export default BackBtn
+export default memo(BackBtn)

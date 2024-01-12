@@ -17,7 +17,7 @@ const AddUser = () => {
             setLoading(false)
             if (!res) return
 
-            navigate(-1)
+            navigate("/admin/user")
         })
     }
 

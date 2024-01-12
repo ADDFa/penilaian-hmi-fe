@@ -20,7 +20,11 @@ const Training = () => {
         <>
             <div className="d-flex justify-content-end gap-1 mb-4">
                 <BackBtn />
-                <Link to="/admin/training/add" className="btn btn-success">
+                <Link
+                    to="/admin/training/add"
+                    className="btn btn-success"
+                    title="Tambah Pelatihan"
+                >
                     <i className="bi bi-plus"></i>
                 </Link>
             </div>
@@ -51,8 +55,17 @@ const Training = () => {
                                     <Link
                                         to={`/admin/user-training/${id}/report`}
                                         className="btn btn-warning"
+                                        title="Data Laporan Kelulusan"
                                     >
                                         <i className="bi bi-clipboard-data-fill"></i>
+                                    </Link>
+
+                                    <Link
+                                        to={`/admin/user-training/${id}/score`}
+                                        className="btn btn-success"
+                                        title="Data Nilai Peserta Pelatihan"
+                                    >
+                                        <i className="bi bi-list-ol"></i>
                                     </Link>
 
                                     <DeleteTraining

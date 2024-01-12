@@ -1,3 +1,5 @@
+import { ParseDate } from "../../../../Function/ParseDate"
+
 class UserScore {
     private user: User.UserT
     private score: Record<string, any>
@@ -5,6 +7,10 @@ class UserScore {
     constructor(user: User.UserT) {
         this.user = user
         this.score = user.score
+    }
+
+    get tanggalPendaftaran() {
+        return ParseDate(this.user.created_at)
     }
 
     get id() {
@@ -17,6 +23,10 @@ class UserScore {
 
     get asal() {
         return this.user.asal
+    }
+
+    get scoreId() {
+        return this.score.id
     }
 
     get tingkahLaku() {

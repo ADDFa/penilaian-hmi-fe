@@ -1,9 +1,13 @@
-import { FC, MouseEventHandler } from "react"
+import { MouseEventHandler } from "react"
 import { Confirm } from "../../../../Function/Alert"
 import Api from "../../../../Function/Api"
+import { UserTraining } from "../../../../@types/Admin/UserTraining"
 
-const DeleteUserTraining: FC<UserTraining.DeleteUserTrainingI> = (props) => {
-    const { user_id, userTraining, setUserTraining } = props
+const DeleteUserTraining = ({
+    user_id,
+    users,
+    setUsers
+}: UserTraining.DeleteUserTrainingI) => {
     const handleClick: MouseEventHandler<HTMLButtonElement> = () => {
         Confirm.fire().then((res) => {
             if (!res.isConfirmed) return
@@ -13,17 +17,20 @@ const DeleteUserTraining: FC<UserTraining.DeleteUserTrainingI> = (props) => {
             })
             req.result().then((res) => {
                 if (!res) return
-            })
 
-            const { training, users } = userTraining
-            const updatedUsers = users.filter(({ id }) => id != user_id)
-            const updatedUserTraining = { training, users: updatedUsers }
-            setUserTraining(updatedUserTraining)
+                const updatedUsers = users.filter((user) => user.id != user_id)
+                setUsers(updatedUsers)
+            })
         })
     }
 
     return (
-        <button type="button" className="btn btn-danger" onClick={handleClick}>
+        <button
+            type="button"
+            className="btn btn-danger"
+            onClick={handleClick}
+            title="Hapus Peserta Pelatihan"
+        >
             <i className="bi bi-trash"></i>
         </button>
     )

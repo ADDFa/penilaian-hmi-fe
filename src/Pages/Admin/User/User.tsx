@@ -47,7 +47,11 @@ const User = () => {
         <>
             <div className="d-flex gap-1 justify-content-end mb-3">
                 <BackBtn />
-                <Link to="/admin/user/add" className="btn btn-primary">
+                <Link
+                    to="/admin/user/add"
+                    className="btn btn-primary"
+                    title="Tambah Pengguna"
+                >
                     <i className="bi bi-plus"></i>
                 </Link>
             </div>
@@ -78,6 +82,7 @@ const User = () => {
                                     <Link
                                         to={`/admin/user/${id}/edit`}
                                         className="btn btn-warning"
+                                        title="Edit Data Pengguna"
                                     >
                                         <i className="bi bi-pen"></i>
                                     </Link>
