@@ -6,6 +6,7 @@ import Form from "../../../../Components/Form"
 const EditUserScore = () => {
     const { score_id } = useParams()
     const [user, setUser] = useState<Record<string, any>>()
+    const [fouls, setFouls] = useState<Record<string, any>[]>([])
     const [score, setScore] = useState<Record<string, any>>()
 
     useEffect(() => {
@@ -13,14 +14,14 @@ const EditUserScore = () => {
         req.result().then((res) => {
             if (!res) return
 
-            const { user, ...rest } = res
+            console.log(res)
+            const { user, fouls, ...rest } = res
 
             setUser(user)
+            setFouls(fouls)
             setScore(rest)
         })
     }, [])
-
-    console.log(user)
 
     return (
         <>
@@ -43,6 +44,7 @@ const EditUserScore = () => {
             </div>
 
             <h5 className="mt-5">Pelanggaran</h5>
+
             <Form></Form>
         </>
     )
