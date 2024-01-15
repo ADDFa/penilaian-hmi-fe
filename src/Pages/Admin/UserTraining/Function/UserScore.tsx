@@ -130,7 +130,8 @@ class UserScore {
     }
 
     get P1() {
-        return 0
+        const psikomotorik = parseInt(this.score.psikomotorik_1)
+        return psikomotorik + this.livelinessN
     }
 
     get penguasaanKelompok() {
@@ -147,7 +148,9 @@ class UserScore {
     }
 
     get PN() {
-        let result = (this.P1 + this.P2) / 2
+        let result = this.P1 + this.P2
+        result /= 2
+
         return result
     }
 
