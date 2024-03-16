@@ -242,7 +242,7 @@ const UserTraining = () => {
                                     <th scope="row">{++i}</th>
                                     <td>{user.nama}</td>
                                     <td>{user.asal}</td>
-                                    <td>{user.middleTestN}</td>
+                                    <td>{user.K1.toFixed(1)}</td>
                                     <td>{user.preTest}</td>
                                     <td>{user.postTest}</td>
                                     <td>{user.KN.toFixed(1)}</td>

@@ -52,7 +52,6 @@ const EditUserScore = () => {
                 const closeBtn = document.querySelector(
                     `#editUserScore [data-bs-dismiss="modal"]`
                 )
-                console.log(closeBtn)
                 if (closeBtn instanceof HTMLButtonElement) {
                     closeBtn.click()
                 }
@@ -249,9 +248,9 @@ const EditUserScore = () => {
                                                     name="penguasaan_kelompok"
                                                     value={1}
                                                     defaultChecked={
-                                                        score?.penguasaanKelompok
-                                                            ? true
-                                                            : false
+                                                        score &&
+                                                        score.penguasaanKelompok >
+                                                            0
                                                     }
                                                 />
                                                 <label
@@ -271,9 +270,8 @@ const EditUserScore = () => {
                                                     name="problem_solving"
                                                     value={1}
                                                     defaultChecked={
-                                                        score?.problemSolving
-                                                            ? true
-                                                            : false
+                                                        score &&
+                                                        score.problemSolving > 0
                                                     }
                                                 />
                                                 <label
@@ -445,6 +443,7 @@ const EditUserScore = () => {
                 <EditLivelineess
                     UrlSearchParams={urlSearchParams}
                     getUserScore={getUserScore}
+                    setUrlSearchParams={setUrlSearchParams}
                 />
                 <EditMiddleTest
                     getUserScore={getUserScore}

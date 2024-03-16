@@ -10,6 +10,10 @@
     display: none;
 }
 
+.text-indent-2 {
+    text-indent: 2rem;
+}
+
 @media print {
     .container {
         margin: 0;

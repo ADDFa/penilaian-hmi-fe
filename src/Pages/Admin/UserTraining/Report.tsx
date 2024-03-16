@@ -69,7 +69,7 @@ const Report = () => {
                 <PrintBtn />
             </div>
 
-            <div className="row row-cols-3 mb-5 align-items-center print-d-flex">
+            <div className="row row-cols-3 mb-5 align-items-center border-bottom border-3 border-dark print-d-flex">
                 <div className="col-2">
                     <img src={hmi2} alt="HMI Logo" width={50} />
                 </div>

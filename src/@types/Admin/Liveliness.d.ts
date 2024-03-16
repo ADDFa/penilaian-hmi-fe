@@ -14,5 +14,6 @@ namespace Liveliness {
     interface EditLivelinessI {
         getUserScore: (then?: () => void) => void
         UrlSearchParams: URLSearchParams
+        setUrlSearchParams: SetURLSearchParams
     }
 }

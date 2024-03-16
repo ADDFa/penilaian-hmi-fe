@@ -1,14 +1,12 @@
 import { ButtonHTMLAttributes, FC, MouseEventHandler } from "react"
-import { useNavigate } from "react-router-dom"
 
 const LogoutBtn: FC<ButtonHTMLAttributes<HTMLButtonElement>> = ({
     className,
     ...rest
 }) => {
-    const navigate = useNavigate()
     const handleClick: MouseEventHandler<HTMLButtonElement> = () => {
         localStorage.clear()
-        navigate("/")
+        window.location.href = "/"
     }
 
     return (

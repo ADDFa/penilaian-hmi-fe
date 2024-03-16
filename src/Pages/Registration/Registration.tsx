@@ -4,6 +4,7 @@ import Hmi from "../../Components/Hmi"
 import LoadingBtn from "../../Components/LoadingBtn"
 import Api from "../../Function/Api"
 import { useNavigate } from "react-router-dom"
+import { Message } from "../../Function/Alert"
 
 const Registration = () => {
     const navigate = useNavigate()
@@ -16,7 +17,15 @@ const Registration = () => {
         const res = await req.result()
 
         setLoading(false)
-        if (res) navigate("/")
+        if (!res) return
+        Message.fire({
+            title: "Berhasil mendaftar",
+            icon: "success"
+        })
+
+        setTimeout(() => {
+            navigate("/")
+        }, 1000)
     }
 
     return (

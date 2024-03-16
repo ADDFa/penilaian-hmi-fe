@@ -18,6 +18,9 @@ class ParseBody {
 
     public get getBody(): any {
         const data = this.body
+
+        if (data instanceof FormData) return data
+
         const result: Record<string, any> = {}
         for (const name in data) {
             if (data[name]) result[name] = data[name]

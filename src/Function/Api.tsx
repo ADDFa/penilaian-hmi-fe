@@ -2,8 +2,10 @@ import Auth from "./Auth"
 import HandleResponseError from "./HandleResponseError"
 import ParseBody from "./ParseBody"
 
+export const base_url = "https://bplhmibengkulu.000webhostapp.com"
+
 class Api {
-    private baseUrl = "http://127.0.0.1:8000"
+    private baseUrl = base_url
     private uri = ""
 
     private init: RequestInit = {
@@ -18,8 +20,11 @@ class Api {
         if (init?.body) {
             this.init.method = "POST"
 
-            const body = new ParseBody(init.body)
-            this.init.body = body.getBody
+            const body = new ParseBody(init.body).getBody
+            if (body instanceof FormData) {
+                this.init.headers = {}
+            }
+            this.init.body = body
         }
     }
 

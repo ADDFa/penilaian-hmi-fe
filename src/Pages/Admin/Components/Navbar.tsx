@@ -27,7 +27,7 @@ const Navbar = () => {
                     to="/admin/dashboard"
                 >
                     <Hmi width={40} />
-                    <span className="fw-bold">BPL HMI</span>
+                    <span className="fw-bold">BPL HMI CABANG BENGKULU</span>
                 </Link>
                 <button
                     className="navbar-toggler ms-1"

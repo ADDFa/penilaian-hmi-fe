@@ -10,11 +10,21 @@ import AddUserTraining from "../Pages/Admin/UserTraining/AddUserTraining"
 import Report from "../Pages/Admin/UserTraining/Report"
 import UserScore from "../Pages/Admin/UserTraining/UserScore"
 import EditUserScore from "../Pages/Admin/UserTraining/Components/EditUserScore"
+import Instructures from "../Pages/Admin/Instructures/Instructures"
+import AddInstructures from "../Pages/Admin/Instructures/AddInstructures"
 
 const adminRoutes: RouteObject[] = [
     {
         path: "dashboard",
         element: <Dashboard />
+    },
+    {
+        path: "instructures",
+        element: <Instructures />
+    },
+    {
+        path: "instructures/add",
+        element: <AddInstructures />
     },
     {
         path: "user",
