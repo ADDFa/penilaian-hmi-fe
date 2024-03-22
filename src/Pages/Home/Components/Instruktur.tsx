@@ -15,7 +15,9 @@ import LaraBella from "../../../assets/instructures/lara-bella.jpg"
 import PanjiArduta from "../../../assets/instructures/panji-arduta.jpg"
 import PaetLubis from "../../../assets/instructures/paet-lubis.jpg"
 import AnjarWahyu from "../../../assets/instructures/anjar-wahyu.jpg"
-import Person from "../../../assets/instructures/person.jpg"
+import WiraJumiati from "../../../assets/instructures/wira-jumiati.jpg"
+import Andika from "../../../assets/instructures/andika.jpg"
+// import Person from "../../../assets/instructures/person.jpg"
 
 const instructures: Instructure[] = [
     {
@@ -164,7 +166,7 @@ const instructures: Instructure[] = [
     },
     {
         name: "Wira Jumiati",
-        photo: Person,
+        photo: WiraJumiati,
         info: {
             from_the_commissariat: "Universitas Muhammadiyah Bengkulu II",
             birth_date: "Ketenong, 21 September 2001",
@@ -197,7 +199,7 @@ const instructures: Instructure[] = [
     },
     {
         name: "Andika Apriliyanto",
-        photo: Person,
+        photo: Andika,
         info: {
             from_the_commissariat: "Syariah UIN FAS bengkuku",
             birth_date: "Tangerang, 25 april 1993",
